@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment App Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+    <style>
+        /* Custom Gradient Colors */
+        .purple-gradient {
+            background: linear-gradient(135deg, #7E22CE, #6041E6);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-sans">
+    <!-- Header placeholder -->
+    <header class="w-full bg-[#120c24]/90 backdrop-blur-lg shadow-sm fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="./index.html">
+                    <img src="./asset/logo.png" alt="Logo" class="w-14 h-14 rounded-full object-cover" />
+                </a>
+                <h1 class="text-xl font-semibold text-white">Dr. Abdur Razzak</h1>
+            </div>
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 text-gray-400 font-medium">
+                <a href="./about.html" class="hover:text-white">About Us</a>
+                <a href="./services.html" class="hover:text-white">Services</a>
+                <a href="./blog.html" class="hover:text-white">Blog</a>
+                <a href="./testimonials.html" class="hover:text-white">Testimonials</a>
+                <a href="./contactus.html" class="hover:text-white">Contact Us</a>
+            </nav>
+
+            <!-- Let’s Talk Button (Desktop Only) -->
+            <div class="hidden md:block">
+                <a href="#contact"
+                    class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2 hover:from-indigo-500 hover:to-purple-500 transition-all duration-300">
+                    <span>Let’s Talk</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 text-3xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-[#120c24] border-t border-gray-700 py-5 space-y-4 md:hidden">
+            <a href="./about.html" class="hover:text-white text-gray-300 text-lg text-center block">About Us</a>
+            <a href="./services.html" class="hover:text-white text-gray-300 text-lg text-center block">Services</a>
+            <a href="./blog.html" class="hover:text-white text-gray-300 text-lg text-center block">Blog</a>
+            <a href="./testimonials.html"
+                class="hover:text-white text-gray-300 text-lg text-center block">Testimonials</a>
+            <a href="./contactus.html" class="hover:text-white text-gray-300 text-lg text-center block">Contact Us</a>
+
+            <a href="#contact"
+                class="mx-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 flex items-center space-x-2">
+                <span>Let’s Talk</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+            </a>
+        </div>
+    </header>
+    <!-- HERO SECTION -->
+    <section class="w-full py-20 px-6 md:px-20">
+        <div class="grid md:grid-cols-2 gap-10 items-center max-w-7xl mx-auto mt-16">
+            <!-- TEXT -->
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold">
+                    EASIEST PAYMENT <br />
+                    METHOD EVER
+                </h1>
+                <p class="text-gray-300 mt-4">
+                    Safe yourself the stress of going to the bank just to complete
+                    transactions. Do it online in seconds using our payment app.
+                </p>
+
+                <button class="mt-6 px-6 py-3 font-semibold rounded-lg purple-gradient">
+                    Get Started
+                </button>
+            </div>
+
+            <!-- PHONE MOCKUP -->
+            <div class="flex justify-center">
+                <div class="relative">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full purple-gradient opacity-40 blur-2xl">
+                    </div>
+                    <img src="https://dummyimage.com/350x650/1a1a1a/ffffff&text=App+UI"
+                        class="w-64 rounded-xl shadow-xl border border-gray-700" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="relative overflow-hidden py-8">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#8b5cf6] via-[#6d28d9] to-[#4c1d95]"></div>
+        <div class="relative flex items-center">
+            <div class="marquee">
+                <div class="flex items-center space-x-6 font-semibold uppercase tracking-wide text-sm px-6">
+                    <span>Webflow</span>
+                    <span>✦</span>
+                    <span>Graphic</span>
+                    <span>✦</span>
+                    <span>Design</span>
+                    <span>✦</span>
+                    <span>Motion</span>
+                    <span>✦</span>
+                    <span>Development</span>
+                    <span>✦</span>
+                    <span>Webflow</span>
+                    <span>✦</span>
+                    <span>Design</span>
+                    <span>✦</span>
+                    <span>Graphic</span>
+                    <span>✦</span>
+                    <span>Motion</span>
+                    <span>✦</span>
+                    <span>Development</span>
+                    <span>✦</span>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="flex items-center space-x-6 font-semibold uppercase tracking-wide text-sm px-6">
+                    <span>Webflow</span>
+                    <span>✦</span>
+                    <span>Graphic</span>
+                    <span>✦</span>
+                    <span>Design</span>
+                    <span>✦</span>
+                    <span>Motion</span>
+                    <span>✦</span>
+                    <span>Development</span>
+                    <span>✦</span>
+                    <span>Webflow</span>
+                    <span>✦</span>
+                    <span>Design</span>
+                    <span>✦</span>
+                    <span>Graphic</span>
+                    <span>✦</span>
+                    <span>Motion</span>
+                    <span>✦</span>
+                    <span>Development</span>
+                    <span>✦</span>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <!-- MANAGE EVERYTHING SECTION -->
+    <section class="w-full bg-black text-white py-20 px-6 md:px-20">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <!-- LEFT SIDE — PHONE + CARDS -->
+            <div class="relative flex justify-center">
+
+                <!-- Glow Circle -->
+                <div class="absolute -top-10 -left-10 w-72 h-72 rounded-full 
+                  bg-gradient-to-br from-[#7E22CE] to-[#6041E6] 
+                  opacity-40 blur-3xl"></div>
+
+                <!-- Phone Mockup -->
+                <img src="./asset/img-4.png" class="w-72 rounded-2xl shadow-2xl border border-gray-700 relative z-10" />
+                <!-- Credit Card Behind -->
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 -rotate-12 
+                  w-48 h-28 bg-gradient-to-br from-[#7E22CE] to-[#6041E6] 
+                  opacity-80 rounded-xl blur-[1px] shadow-xl border border-gray-700">
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE — TEXT -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Manage Everything in<br>Your Hand
+                </h2>
+                <p class="text-gray-300 mb-10">
+                    You can manage your account right from the palm of your hands
+                    with our mobile app. Do transactions easily and enjoy reliability
+                    at great style.
+                </p>
+                <!-- FEATURES LIST -->
+                <div class="space-y-8">
+                    <!-- Item 1 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full flex justify-center items-center 
+                      bg-gradient-to-br from-[#7E22CE] to-[#6041E6]">
+                            <i class="text-white text-xl">✔</i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-purple-300">User Friendly</h3>
+                            <p class="text-gray-400 text-sm">
+                                UI design is clean, smooth and very easy to use.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full flex justify-center items-center 
+                      bg-gradient-to-br from-[#7E22CE] to-[#6041E6]">
+                            <i class="text-white text-xl">💬</i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-purple-300">Great Support</h3>
+                            <p class="text-gray-400 text-sm">
+                                You can always rely on us through 24/7 live support.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full flex justify-center items-center 
+                      bg-gradient-to-br from-[#7E22CE] to-[#6041E6]">
+                            <i class="text-white text-xl">🔒</i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-purple-300">Secure</h3>
+                            <p class="text-gray-400 text-sm">
+                                All data is encrypted with the latest security standards.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- MERCHANT PROMOS SECTION -->
+    <section class="w-full py-20 px-6 md:px-20">
+        <div class="grid md:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
+            <!-- TEXT -->
+            <div>
+                <h2 class="text-3xl font-bold">Enjoy Various Merchant’s Promos</h2>
+                <p class="text-gray-300 mt-4">
+                    Get discounts and cashback from your favorite brands with every purchase.
+                </p>
+                <button class="mt-6 px-6 py-3 font-semibold rounded-lg purple-gradient">
+                    Learn More
+                </button>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 rounded-full purple-gradient opacity-40 blur-2xl"></div>
+
+                <img src="https://dummyimage.com/500x350/1a1a1a/ffffff&text=Shopping+Promo"
+                    class="rounded-xl shadow-xl border border-gray-700" />
+            </div>
+
+        </div>
+    </section>
+    <script src="./script.js"></script>
+    <!--Footer Section-->
+    <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+            <!-- LOGO + ABOUT -->
+            <div>
+                <div class="flex items-center space-x-2">
+                    <img src="./asset/logo.png" alt="Logo" class="w-10 h-10 object-cover" />
+                    <h2 class="text-2xl font-semibold">About Me</h2>
+                </div>
+                <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+                    I break down complex user the experience problems the create integrity
+                    focused to <br> solutions that's connect.
+                </p>
+                <!-- Social Icons -->
+                <div class="flex space-x-4 mt-5">
+                    <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-x-twitter text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
+                </div>
+            </div>
+
+            <!-- LEGAL DETAILS -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4">LEGAL DETAILS</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="./terms.html" class="hover:text-white">Term & Conditions</a></li>
+                    <li><a href="./refund.html" class="hover:text-white">Refund and Cancellation</a></li>
+                    <li><a href="./pages.html" class="hover:text-white">Pages</a></li>
+                    <li><a href="./disclaimer.html" class="hover:text-white">Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4 uppercase">Our Services</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./about.html" class="hover:text-white">About Us</a></li>
+                    <li><a href="./consultation.html" class="hover:text-white">Consultation And Strategy</a></li>
+                    <li><a href="./mobile.html" class="hover:text-white">Mobile App Design</a></li>
+                    <li><a href="./branding.html" class="hover:text-white">Branding And Visual Identity</a></li>
+                    <li><a href="./ui/uxdesign.html" class="hover:text-white">UI/UX Design System Creation</a></li>
+                </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div>
+                <h3 class="text-sm font-semibold tracking-wider mb-4">SUBSCRIBE TO MY NEWSLETTER!</h3>
+                <div class="flex items-center bg-white rounded-full p-1 pl-4">
+                    <input type="text" placeholder="Enter First Name"
+                        class="flex-1 text-black text-sm bg-transparent outline-none">
+                    <button class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                        ↗
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="border-t border-white/10 my-10"></div>
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-center text-sm text-gray-400">
+            <div class="mt-4 md:mt-0">
+                ©2025 ALL RIGHTS RESERVED
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
