@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Blog Section</title>
     <link rel="icon" type="image/x-icon" href="./asset/logo.png" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -95,7 +93,111 @@
             </div>
         </div>
     </section>
-    <!-- BLOG CARDS SECTION -->
+
+    <div>
+        <h2 class="text-white text-5xl font-bold flex items-center justify-center py-10">
+            Our Recent Blog
+        </h2>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+        <!-- CARD 1 -->
+        <div class="bg-[#111018] rounded-xl p-4 border border-white/10 shadow-xl">
+            <div class="relative">
+                <span class="absolute top-3 left-3 bg-purple-600 text-xs px-3 py-1 rounded-full">SAAS</span>
+                <img src="./asset/img-1.jpg"
+                    class="rounded-lg zoom-target h-56 w-full object-cover transition-transform duration-300 hover:scale-110"
+                    alt="">
+            </div>
+            <div class="mt-4 text-gray-400 text-sm">
+                By Gerold • May 10, 2024
+            </div>
+            <h3 class="mt-3 font-bold text-lg">
+                THE ROLE OF TECHNOLOGY<br> IN MODERN...
+            </h3>
+        </div>
+        <!-- CARD 2 -->
+        <div class="bg-[#111018] rounded-xl p-4 border border-white/10 shadow-xl">
+            <div class="relative">
+                <span class="absolute top-3 left-3 bg-pink-500 text-xs px-3 py-1 rounded-full">Design</span>
+                <img src="./asset/img-2.jpg"
+                    class="rounded-lg zoom-target h-56 w-full object-cover transition-transform duration-300 hover:scale-110"
+                    alt="">
+            </div>
+            <div class="mt-4 text-gray-400 text-sm">
+                By Gerold • May 10, 2024
+            </div>
+            <h3 class="mt-3 font-bold text-lg">
+                THE SERVICES PROVIDE FOR<br> DESIGN
+            </h3>
+        </div>
+        <!-- CARD 3 -->
+        <div class="bg-[#111018] rounded-xl p-4 border border-white/10 shadow-xl">
+            <div class="relative">
+                <span class="absolute top-3 left-3 bg-blue-600 text-xs px-3 py-1 rounded-full">Technology</span>
+                <img src="./asset/img-3.jpg"
+                    class="rounded-lg zoom-target h-56 w-full object-cover transition-transform duration-300 hover:scale-110"
+                    alt="">
+            </div>
+
+            <div class="mt-4 text-gray-400 text-sm">
+                By Gerold • May 10, 2024
+            </div>
+
+            <h3 class="mt-3 font-bold text-lg">
+                DIGITAL MARKETO TO THEIR<br> NEW OFFICE.
+            </h3>
+        </div>
+        <!-- CARD 4 -->
+        <div class="bg-[#111018] rounded-xl p-4 border border-white/10 shadow-xl">
+            <div class="relative">
+                <span class="absolute top-3 left-3 bg-purple-600 text-xs px-3 py-1 rounded-full">SAAS</span>
+                <img src="https://gerold.themejunction.net/wp-content/uploads/2024/05/blog-3-1536x597.jpg"
+                    class="rounded-lg zoom-target h-56 w-full object-cover transition-transform duration-300 hover:scale-110"
+                    alt="">
+            </div>
+            <div class="mt-4 text-gray-400 text-sm">
+                By Gerold • May 10, 2024
+            </div>
+            <h3 class="mt-3 font-bold text-lg">
+                THE ROLE OF TECHNOLOGY<br> IN MODERN...
+            </h3>
+        </div>
+        <!-- CARD 5 -->
+        <div class="bg-[#111018] rounded-xl p-4 border border-white/10 shadow-xl">
+            <div class="relative">
+                <span class="absolute top-3 left-3 bg-pink-500 text-xs px-3 py-1 rounded-full">Design</span>
+                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80"
+                    class="rounded-lg zoom-target h-56 w-full object-cover transition-transform duration-300 hover:scale-110"
+                    alt="">
+            </div>
+            <div class="mt-4 text-gray-400 text-sm">
+                By Gerold • May 10, 2024
+            </div>
+            <h3 class="mt-3 font-bold text-lg">
+                THE SERVICES PROVIDE FOR<br> DESIGN
+            </h3>
+        </div>
+        <!-- CARD 6 -->
+        <div class="bg-[#111018] rounded-xl p-4 border border-white/10 shadow-xl">
+            <div class="relative">
+                <span class="absolute top-3 left-3 bg-blue-600 text-xs px-3 py-1 rounded-full">Technology</span>
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80"
+                    class="rounded-lg zoom-target h-56 w-full object-cover transition-transform duration-300 hover:scale-110"
+                    alt="">
+            </div>
+
+            <div class="mt-4 text-gray-400 text-sm">
+                By Gerold • May 10, 2024
+            </div>
+
+            <h3 class="mt-3 font-bold text-lg">
+                DIGITAL MARKETO TO THEIR<br> NEW OFFICE.
+            </h3>
+        </div>
+    </div>
+
+    <!-- Header Section -->
     <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
             <!-- LOGO + ABOUT -->
@@ -152,9 +254,7 @@
                     </button>
                 </div>
             </div>
-
         </div>
-
         <!-- Divider Line -->
         <div class="border-t border-white/10 my-10"></div>
         <!-- Bottom Bar -->
@@ -164,6 +264,7 @@
             </div>
         </div>
     </section>
+
     <script src="./script.js"></script>
     <script>
         console.log("Fully Responsive Blog Section Loaded");

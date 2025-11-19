@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --dark: #0d0718;
+            --purple1: #712FDD;
+            --purple2: #7927D2;
+            --mix-purple: #9B6EF4;
+        }
+
+        .card-shadow {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+        }
+    </style>
+</head>
+
+<body class="bg-[var(--dark)] text-white">
+    <!-- Header placeholder -->
+    <header class="w-full bg-[#120c24]/90 backdrop-blur-lg shadow-sm fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="./index.html">
+                    <img src="./asset/logo.png" alt="Logo" class="w-14 h-14 rounded-full object-cover" />
+                </a>
+                <h1 class="text-xl font-semibold text-white">Dr. Abdur Razzak</h1>
+            </div>
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 text-gray-400 font-medium">
+                <a href="./about.html" class="hover:text-white">About Us</a>
+                <a href="./services.html" class="hover:text-white">Services</a>
+                <a href="./blog.html" class="hover:text-white">Blog</a>
+                <a href="./testimonials.html" class="hover:text-white">Testimonials</a>
+                <a href="./contactus.html" class="hover:text-white">Contact Us</a>
+            </nav>
+
+            <!-- Let’s Talk Button (Desktop Only) -->
+            <div class="hidden md:block">
+                <a href="#contact"
+                    class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2 hover:from-indigo-500 hover:to-purple-500 transition-all duration-300">
+                    <span>Let’s Talk</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 text-3xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-[#120c24] border-t border-gray-700 py-5 space-y-4 md:hidden">
+            <a href="./about.html" class="hover:text-white text-gray-300 text-lg text-center block">About Us</a>
+            <a href="./services.html" class="hover:text-white text-gray-300 text-lg text-center block">Services</a>
+            <a href="./blog.html" class="hover:text-white text-gray-300 text-lg text-center block">Blog</a>
+            <a href="./testimonials.html"
+                class="hover:text-white text-gray-300 text-lg text-center block">Testimonials</a>
+            <a href="./contactus.html" class="hover:text-white text-gray-300 text-lg text-center block">Contact Us</a>
+
+            <a href="#contact"
+                class="mx-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 flex items-center space-x-2">
+                <span>Let’s Talk</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN WRAPPER -->
+    <main class="max-w-7xl mx-auto mt-32 px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <!-- LEFT SIDEBAR -->
+        <aside class="space-y-6 md:col-span-1">
+            <!-- SERVICE LIST -->
+            <div class="p-5 rounded-2xl bg-[#131022] card-shadow border border-white/10">
+                <h3 class="text-lg font-semibold text-[var(--mix-purple)] uppercase mb-4">Our Services</h3>
+                <ul class="space-y-3">
+                    <li
+                        class="p-3 bg-[#1a162e] rounded-xl border border-white/10 cursor-pointer hover:bg-[#221b3d] transition">
+                        Website App Design & Development
+                    </li>
+                    <li
+                        class="p-3 bg-[#1a162e] rounded-xl border border-white/10 cursor-pointer hover:bg-[#221b3d] transition">
+                        UI/UX Design System Creation
+                    </li>
+                    <li
+                        class="p-3 bg-[#1a162e] rounded-xl border border-white/10 cursor-pointer hover:bg-[#221b3d] transition">
+                        Branding & Visual Identity
+                    </li>
+                    <li
+                        class="p-3 bg-[#1a162e] rounded-xl border border-white/10 cursor-pointer hover:bg-[#221b3d] transition">
+                        Consultation & Product Strategy
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA BOX -->
+            <div class="p-5 rounded-2xl bg-[#131022] card-shadow border border-white/10">
+                <p class="text-[var(--mix-purple)] text-xs uppercase font-semibold">Get Started</p>
+                <h4 class="text-xl font-bold mt-2">Get Started With Our Services Today</h4>
+                <p class="text-white/80 mt-2 text-sm">Book your consultation call easily.</p>
+
+                <button class="mt-4 px-5 py-3 rounded-xl font-semibold bg-[var(--purple1)] 
+                hover:bg-[var(--purple2)] transition text-white">
+                    Let's Talk
+                </button>
+            </div>
+
+            <!-- Image -->
+            <div class="rounded-2xl overflow-hidden card-shadow border border-white/10">
+                <img src="./asset/img-2.jpg" class="w-full h-48 object-cover" />
+            </div>
+        </aside>
+        <!-- MAIN CONTENT -->
+        <section class="space-y-10 md:col-span-3">
+            <!-- HERO SECTION -->
+            <div class="rounded-2xl bg-[#131022] p-6 border border-white/10 card-shadow">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-extrabold leading-snug">
+                            Why choose our <span class="text-[var(--mix-purple)]">design system</span>
+                        </h1>
+                        <p class="text-white/80 mt-3 leading-relaxed">
+                            Our design system ensures consistency, scalability, and
+                            faster iteration cycles for UI/UX development across products.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-3">
+                            <span class="px-4 py-2 rounded-xl bg-[#1a162e] border border-white/10 text-sm">
+                                Component Library
+                            </span>
+                            <span class="px-4 py-2 rounded-xl bg-[#1a162e] border border-white/10 text-sm">
+                                Scalable System
+                            </span>
+                            <span class="px-4 py-2 rounded-xl bg-[#1a162e] border border-white/10 text-sm">
+                                Team Collaboration
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl overflow-hidden border border-white/10">
+                        <img src="./asset/img-3.jpg" class="w-full object-cover" />
+                    </div>
+
+                </div>
+            </div>
+            <!-- USER-CENTRIC DESIGN CARD -->
+            <div class="rounded-2xl bg-[#131022] p-6 border border-white/10 card-shadow">
+                <h3 class="text-2xl font-bold">Consistent user-centric design</h3>
+                <p class="text-white/80 mt-2">
+                    User-focused design validated with testing and research for better performance.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <h2 class="text-4xl font-extrabold text-[var(--mix-purple)]">+60%</h2>
+                        <p class="text-white/80 text-sm">Better user engagement</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-4xl font-extrabold text-[var(--mix-purple)]">+80%</h2>
+                        <p class="text-white/80 text-sm">Faster iteration cycles</p>
+                    </div>
+                </div>
+            </div>
+            <!-- PROCESS CARD -->
+            <div class="rounded-2xl bg-[#131022] p-6 border border-white/10 card-shadow">
+                <h3 class="text-2xl font-bold">Process for seamless design</h3>
+                <ol class="list-decimal pl-5 mt-3 space-y-2 text-white/80">
+                    <li>Research & Discovery</li>
+                    <li>Design Tokens & Components</li>
+                    <li>Developer Handoff & Documentation</li>
+                </ol>
+
+                <button class="mt-5 px-5 py-3 rounded-xl font-semibold bg-[var(--purple1)] 
+                hover:bg-[var(--purple2)] transition text-white">
+                    Read More
+                </button>
+            </div>
+            <!-- GALLERY SECTION -->
+            <div class="rounded-2xl bg-[#131022] p-6 border border-white/10 card-shadow">
+                <h3 class="text-2xl font-bold">Design Previews</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                    <div class="rounded-xl bg-[#1a162e] p-4 border border-white/10">
+                        <img src="./asset/img-1.jpg" class="rounded-md w-full h-40 object-cover" />
+                        <h4 class="mt-3 font-bold">Landing Redesign</h4>
+                        <p class="text-white/80 text-sm mt-1">Modern landing page system.</p>
+                    </div>
+                    <div class="rounded-xl bg-[#1a162e] p-4 border border-white/10">
+                        <img src="./asset/img-2.jpg" class="rounded-md w-full h-40 object-cover" />
+                        <h4 class="mt-3 font-bold">Dashboard UI</h4>
+                        <p class="text-white/80 text-sm mt-1">Reusable dashboard components.</p>
+                    </div>
+
+                    <div class="rounded-xl bg-[#1a162e] p-4 border border-white/10">
+                        <img src="./asset/img-1.jpg" class="rounded-md w-full h-40 object-cover" />
+                        <h4 class="mt-3 font-bold">Mobile App</h4>
+                        <p class="text-white/80 text-sm mt-1">Tokenized mobile UI system.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Item -->
+            <div class="space-y-4">
+                <!-- Item 1 -->
+                <div class="faq-item bg-[#131020] rounded-xl overflow-hidden border border-[#7927D2]/30">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center py-5 px-6 text-left text-lg font-semibold">
+                        <span>How long does a project take to complete?</span>
+                        <span class="icon text-2xl">+</span>
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 bg-gradient-to-r from-[#712FDD] to-[#7927D2] text-white">
+                        <p class="pt-2 leading-relaxed">
+                            My process involves three main steps: discovery, design, and delivery. First, I gather all
+                            the
+                            necessary details about your project, including your goals and target audience. Then, I
+                            create
+                            wireframes and prototypes to ensure we’re aligned before moving.
+                        </p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="faq-item bg-[#131020] rounded-xl overflow-hidden border border-[#7927D2]/30">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center py-5 px-6 text-left text-lg font-semibold">
+                        <span>What is your design process?</span>
+                        <span class="icon text-2xl">+</span>
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 bg-gradient-to-r from-[#712FDD] to-[#7927D2]">
+                        <p class="pt-2 leading-relaxed">
+                            My design process focuses on research, wireframing, UI creation, prototyping, and testing to
+                            ensure the best possible results.
+                        </p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="faq-item bg-[#131020] rounded-xl overflow-hidden border border-[#7927D2]/30">
+                    <button
+                        class="faq-btn w-full flex justify-between items-center py-5 px-6 text-left text-lg font-semibold">
+                        <span>Can I make changes after the project is completed?</span>
+                        <span class="icon text-2xl">+</span>
+                    </button>
+
+                    <div class="faq-content hidden px-6 pb-6 bg-gradient-to-r from-[#712FDD] to-[#7927D2]">
+                        <p class="pt-2 leading-relaxed">
+                            Yes, you can request updates or revisions anytime after project completion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Footer Section-->
+    <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+            <!-- LOGO + ABOUT -->
+            <div>
+                <div class="flex items-center space-x-2">
+                    <img src="./asset/logo.png" alt="Logo" class="w-10 h-10 object-cover" />
+                    <h2 class="text-2xl font-semibold">About Me</h2>
+                </div>
+                <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+                    I break down complex user the experience problems the create integrity
+                    focused to <br> solutions that's connect.
+                </p>
+                <!-- Social Icons -->
+                <div class="flex space-x-4 mt-5">
+                    <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-x-twitter text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
+                </div>
+            </div>
+
+            <!-- LEGAL DETAILS -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4">LEGAL DETAILS</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="./terms.html" class="hover:text-white">Term & Conditions</a></li>
+                    <li><a href="./refund.html" class="hover:text-white">Refund and Cancellation</a></li>
+                    <li><a href="./pages.html" class="hover:text-white">Pages</a></li>
+                    <li><a href="./disclaimer.html" class="hover:text-white">Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4 uppercase">Our Services</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./about.html" class="hover:text-white">About Us</a></li>
+                    <li><a href="./consultation.html" class="hover:text-white">Consultation And Strategy</a></li>
+                    <li><a href="./mobile.html" class="hover:text-white">Mobile App Design</a></li>
+                    <li><a href="./branding.html" class="hover:text-white">Branding And Visual Identity</a></li>
+                    <li><a href="./ui/uxdesign.html" class="hover:text-white">UI/UX Design System Creation</a></li>
+                </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div>
+                <h3 class="text-sm font-semibold tracking-wider mb-4">SUBSCRIBE TO MY NEWSLETTER!</h3>
+                <div class="flex items-center bg-white rounded-full p-1 pl-4">
+                    <input type="text" placeholder="Enter First Name"
+                        class="flex-1 text-black text-sm bg-transparent outline-none">
+                    <button class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                        ↗
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Divider Line -->
+        <div class="border-t border-white/10 my-10"></div>
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-center text-sm text-gray-400">
+            <div class="mt-4 md:mt-0">
+                ©2025 ALL RIGHTS RESERVED
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+    <script>
+        const faqBtns = document.querySelectorAll(".faq-btn");
+        faqBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector(".icon");
+
+                // Close all other FAQ items
+                document.querySelectorAll(".faq-content").forEach((el) => {
+                    if (el !== content) el.classList.add("hidden");
+                });
+                document.querySelectorAll(".icon").forEach((ic) => {
+                    if (ic !== icon) ic.textContent = "+";
+                });
+
+                // Toggle current item
+                content.classList.toggle("hidden");
+                icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+            });
+        });
+    </script>
+</body>
+
+</html>
