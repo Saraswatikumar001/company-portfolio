@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refund & Cancellation Policy</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-gray-200">
+    <!-- Header placeholder -->
+    <header class="w-full bg-[#120c24]/90 backdrop-blur-lg shadow-sm fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="./index.html">
+                    <img src="./asset/logo.png" alt="Logo" class="w-14 h-14 rounded-full object-cover" />
+                </a>
+                <h1 class="text-xl font-semibold text-white">Dr. Abdur Razzak</h1>
+            </div>
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 text-gray-400 font-medium">
+                <a href="./about.html" class="hover:text-white">About Us</a>
+                <a href="./services.html" class="hover:text-white">Services</a>
+                <a href="./blog.html" class="hover:text-white">Blog</a>
+                <a href="./testimonials.html" class="hover:text-white">Testimonials</a>
+                <a href="./contactus.html" class="hover:text-white">Contact Us</a>
+            </nav>
+
+            <!-- Let’s Talk Button (Desktop Only) -->
+            <div class="hidden md:block">
+                <a href="#contact"
+                    class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2 hover:from-indigo-500 hover:to-purple-500 transition-all duration-300">
+                    <span>Let’s Talk</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 text-3xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-[#120c24] border-t border-gray-700 py-5 space-y-4 md:hidden">
+            <a href="./about.html" class="hover:text-white text-gray-300 text-lg text-center block">About Us</a>
+            <a href="./services.html" class="hover:text-white text-gray-300 text-lg text-center block">Services</a>
+            <a href="./blog.html" class="hover:text-white text-gray-300 text-lg text-center block">Blog</a>
+            <a href="./testimonials.html"
+                class="hover:text-white text-gray-300 text-lg text-center block">Testimonials</a>
+            <a href="./contactus.html" class="hover:text-white text-gray-300 text-lg text-center block">Contact Us</a>
+
+            <a href="#contact"
+                class="mx-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 flex items-center space-x-2">
+                <span>Let’s Talk</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+            </a>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <header class="relative w-full h-[330px] md:h-[480px] overflow-hidden flex items-center justify-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="../asset/img-5.jpg" alt="Background" class="w-full h-full object-cover">
+        </div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <!-- Content -->
+        <div class="relative max-w-6xl mx-auto px-6 h-full flex flex-col justify-center text-white">
+            <!-- Breadcrumb -->
+            <nav class="text-sm mb-4">
+                <ol class="flex items-center justify-center space-x-2">
+                    <li>
+                        <a href="/" class="text-white/70 hover:text-white">Home</a>
+                    </li>
+                    <li class="text-white/50">/</li>
+                    <a class="text-white/90 font-semibold">
+                        Refund and Cancellation
+                    </a>
+                </ol>
+            </nav>
+            <!-- Heading -->
+            <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
+                Refund and Cancellation
+            </h1>
+        </div>
+    </header>
+    <!-- Content -->
+    <section class="max-w-6xl mx-auto px-6 py-16 space-y-10">
+
+        <!-- Intro Section -->
+        <div class="bg-black border border-[#712FDD]/40 p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold text-[#7927D2] mb-3">Overview</h2>
+            <p class="leading-relaxed text-gray-300">
+                This Refund & Cancellation Policy outlines the terms and conditions for cancellations and refunds for
+                any services provided through my portfolio website.
+            </p>
+        </div>
+
+        <!-- Policy Details -->
+        <div class="bg-black border border-[#712FDD]/40 p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold text-[#7927D2] mb-6">Policy Details</h2>
+
+            <!-- Item 1 -->
+            <div class="border-b border-[#712FDD]/40 py-5">
+                <button class="policy-btn flex justify-between items-center w-full text-lg font-medium text-[#712FDD]">
+                    1. Cancellation Policy
+                    <span class="text-2xl font-bold">+</span>
+                </button>
+                <p class="policy-content hidden mt-3 text-gray-300">
+                    You can request a cancellation before the project work begins. Once work has started, cancellations
+                    may not qualify for a full refund.
+                </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="border-b border-[#712FDD]/40 py-5">
+                <button class="policy-btn flex justify-between items-center w-full text-lg font-medium text-[#712FDD]">
+                    2. Refund Eligibility
+                    <span class="text-2xl font-bold">+</span>
+                </button>
+                <p class="policy-content hidden mt-3 text-gray-300">
+                    Refunds are issued only if no major work has been completed or if the service cannot be delivered
+                    due to technical issues on my end.
+                </p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="border-b border-[#712FDD]/40 py-5">
+                <button class="policy-btn flex justify-between items-center w-full text-lg font-medium text-[#712FDD]">
+                    3. Non-refundable Services
+                    <span class="text-2xl font-bold">+</span>
+                </button>
+                <p class="policy-content hidden mt-3 text-gray-300">
+                    Completed projects, delivered designs, codes, or downloadable files are non-refundable.
+                </p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="py-5">
+                <button class="policy-btn flex justify-between items-center w-full text-lg font-medium text-[#712FDD]">
+                    4. Refund Processing Time
+                    <span class="text-2xl font-bold">+</span>
+                </button>
+                <p class="policy-content hidden mt-3 text-gray-300">
+                    Refunds (if eligible) are processed within 5–10 business days. Delays may occur based on bank or
+                    payment provider timelines.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Contact Section -->
+        <div class="bg-black border border-[#712FDD]/40 p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold text-[#7927D2] mb-3">Need Help?</h2>
+            <p class="text-gray-300">
+                For cancellations or refund-related queries, you can contact me at:
+            </p>
+
+            <p class="mt-3 font-semibold text-[#7927D2]">📧 Email: your-email@example.com</p>
+        </div>
+
+    </section>
+    <!-- Scroll to Top Button -->
+    <button id="topBtn"
+        class="hidden fixed bottom-6 right-6 bg-[#712FDD] hover:bg-[#7927D2] text-white p-3 rounded-full shadow-xl">
+        ↑
+    </button>
+    <!--Footer Section-->   
+    <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+            <!-- LOGO + ABOUT -->
+            <div>
+                <div class="flex items-center space-x-2">
+                    <img src="./asset/logo.png" alt="Logo" class="w-10 h-10 object-cover" />
+                    <h2 class="text-2xl font-semibold">About Me</h2>
+                </div>
+                <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+                    I break down complex user the experience problems the create integrity
+                    focused to <br> solutions that's connect.
+                </p>
+                <!-- Social Icons -->
+                <div class="flex space-x-4 mt-5">
+                    <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-x-twitter text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
+                </div>
+            </div>
+
+            <!-- LEGAL DETAILS -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4">LEGAL DETAILS</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="./terms-condition.html" class="hover:text-white">Term & Conditions</a></li>
+                    <li><a href="./refund.html" class="hover:text-white">Refund and Cancellation</a></li>
+                    <li><a href="./disclaimer.html" class="hover:text-white">Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4 uppercase">Our Services</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./about.html" class="hover:text-white">About Us</a></li>
+                    <li><a href="./consultation.html" class="hover:text-white">Consultation And Strategy</a></li>
+                    <li><a href="./mobile.html" class="hover:text-white">Mobile App Design</a></li>
+                    <li><a href="./ui/disclaimer.html" class="hover:text-white">UI/UX Design System Creation</a></li>
+                </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div>
+                <h3 class="text-sm font-semibold tracking-wider mb-4">SUBSCRIBE TO MY NEWSLETTER!</h3>
+                <div class="flex items-center bg-white rounded-full p-1 pl-4">
+                    <input type="text" placeholder="Enter First Name"
+                        class="flex-1 text-black text-sm bg-transparent outline-none">
+                    <button class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                        ↗
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="border-t border-white/10 my-10"></div>
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-center text-sm text-gray-400">
+            <div class="mt-4 md:mt-0">
+                ©2025 ALL RIGHTS RESERVED
+            </div>
+        </div>
+    </section>
+    <!-- JavaScript -->
+    <script>
+        // Accordion
+        const btns = document.querySelectorAll(".policy-btn");
+
+        btns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle("hidden");
+
+                let icon = btn.querySelector("span");
+                icon.textContent = content.classList.contains("hidden") ? "+" : "-";
+            });
+        });
+
+        // Scroll to top
+        const topBtn = document.getElementById("topBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                topBtn.classList.remove("hidden");
+            } else {
+                topBtn.classList.add("hidden");
+            }
+        });
+
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+
+</html>

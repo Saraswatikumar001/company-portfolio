@@ -30,7 +30,7 @@
             <!-- Logo -->
             <div class="flex items-center space-x-3">
                 <a href="./index.html">
-                    <img src="./asset/logo.png" alt="Logo" class="w-14 h-14 rounded-full object-cover" />
+                    <img src="./asset/logo.png" alt="Logo" class="w-20 h-20 rounded-full object-cover" />
                 </a>
                 <h1 class="text-xl font-semibold text-white">Dr. Abdur Razzak</h1>
             </div>
@@ -169,7 +169,8 @@
                   opacity-40 blur-3xl"></div>
 
                 <!-- Phone Mockup -->
-                <img src="./asset/img-2.png" class="w-72 rounded-2xl shadow-2xl border border-gray-700 relative z-10" />
+                <img src="https://i.pinimg.com/1200x/d7/7b/fa/d77bfad58c87dc1ab2d777510d4bdfc5.jpg"
+                    class="w-72 rounded-2xl shadow-2xl border border-gray-700 relative z-10" />
                 <!-- Credit Card Behind -->
                 <div class="absolute left-0 top-1/2 -translate-y-1/2 -rotate-12 
                   w-48 h-28 bg-gradient-to-br from-[#7E22CE] to-[#6041E6] 
@@ -258,6 +259,42 @@
                     class="rounded-xl shadow-xl border border-gray-700" />
             </div>
 
+        </div>
+    </section>
+    <section id="talkModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[9999]"
+        onclick="closeOutside(event)">
+        <!-- Modal Box -->
+        <div id="modalBox" class="relative bg-[#0e0e0e] w-[90%] max-w-lg p-8 rounded-2xl shadow-2xl border border-white/10 
+           transform scale-90 opacity-0 transition-all duration-300">
+            <!-- Close Icon -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-white/60 hover:text-white text-xl">
+                ✕
+            </button>
+            <h2 class="text-3xl font-bold text-white mb-4">Let’s Talk</h2>
+            <p class="text-white/70 mb-6 leading-relaxed">
+                Feel free to reach out! I'd love to discuss your project.
+            </p>
+            <form class="space-y-4">
+                <div>
+                    <label class="text-white/80 text-sm">Full Name</label>
+                    <input type="text" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white 
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label class="text-white/80 text-sm">Email Address</label>
+                    <input type="email" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label class="text-white/80 text-sm">Message</label>
+                    <textarea rows="4" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Write your message..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-[#712FDD] to-[#7927D2] text-white font-semibold 
+               rounded-lg shadow-lg hover:opacity-90 transition">
+                    Send Message
+                </button>
+            </form>
         </div>
     </section>
     <script src="./script.js"></script>

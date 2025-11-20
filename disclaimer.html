@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi I'm Dr. Abdur Razzak | I'm the founder of Fusion Techlab</title>
+    <link rel="shortcut icon" href="./public/asset/logo.png" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="./asset/logo.png" />
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Smooth fade animation */
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+    <!-- Header placeholder -->
+    <header class="w-full bg-[#120c24]/90 backdrop-blur-lg shadow-sm fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <a href="./index.html">
+                    <img src="../asset/logo.png" alt="Logo" class="w-14 h-14 rounded-full object-cover" />
+                </a>
+                <h1 class="text-xl font-semibold text-white">Dr. Abdur Razzak</h1>
+            </div>
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 text-gray-400 font-medium">
+                <a href="./about.html" class="hover:text-white">About Us</a>
+                <a href="./services.html" class="hover:text-white">Services</a>
+                <a href="./blog.html" class="hover:text-white">Blog</a>
+                <a href="./testimonials.html" class="hover:text-white">Testimonials</a>
+                <a href="./contactus.html" class="hover:text-white">Contact Us</a>
+            </nav>
+            <!-- Let’s Talk Button (Desktop Only) -->
+            <div class="hidden md:block">
+                <a href="#contact"
+                    class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2 hover:from-indigo-500 hover:to-purple-500 transition-all duration-300">
+                    <span>Let’s Talk</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 text-3xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col bg-[#120c24] border-t border-gray-700 py-5 space-y-4 md:hidden">
+            <a href="./about.html" class="hover:text-white text-gray-300 text-lg text-center block">About Us</a>
+            <a href="./services.html" class="hover:text-white text-gray-300 text-lg text-center block">Services</a>
+            <a href="./blog.html" class="hover:text-white text-gray-300 text-lg text-center block">Blog</a>
+            <a href="./testimonials.html"
+                class="hover:text-white text-gray-300 text-lg text-center block">Testimonials</a>
+            <a href="./contactus.html" class="hover:text-white text-gray-300 text-lg text-center block">Contact Us</a>
+            <a href="#contact"
+                class="mx-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 flex items-center space-x-2">
+                <span>Let’s Talk</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+            </a>
+        </div>
+    </header>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative h-[55vh] md:h-[70vh] w-full flex items-center justify-center">
+        <div class="absolute inset-0 bg-[url('../asset/img-6.jpg')] bg-cover bg-center">
+        </div>
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 fade-in text-center">
+            <div class="text-sm mb-4">
+                <ol class="flex justify-center space-x-2 text-gray-300">
+                    <li><a href="/" class="hover:text-white">Home</a></li>
+                    <li>/</li>
+                    <li class="text-white"><a href="./disclaimer.html" class="hover:text-white">Disclaimer</a></li>
+                </ol>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-extrabold drop-shadow-lg">
+                Disclaimer
+            </h1>
+            <p class="mt-4 text-white/80 text-lg max-w-2xl mx-auto">
+                Transparency and clarity about your use of this website.
+            </p>
+        </div>
+    </section>
+    <!-- ================= MAIN CONTENT ================= -->
+    <section class="max-w-5xl mx-auto px-6 py-16 fade-in">
+        <h2 class="text-4xl font-bold mb-4 text-[#7927D2]">General Information</h2>
+        <p class="text-white/80 leading-relaxed text-lg md:text-xl  mb-8">
+            The information provided on this portfolio website is for general informational and educational purposes
+            only.
+            All content is created based on personal learning, experience, and research.
+            While I strive to keep the information up-to-date and accurate, I make no guarantees of any kind about
+            completeness, reliability, or accuracy.
+        </p>
+        <h2 class="text-4xl font-bold mb-4 text-[#7927D2]">No Professional Advice</h2>
+        <p class="text-white/80 leading-relaxed mb-8 text-lg md:text-xl">
+            The content on this site does not constitute professional advice (technical, financial, legal, or
+            otherwise).
+            Any action you take based on this information is strictly at your own risk.
+        </p>
+        <h2 class="text-4xl font-bold mb-4 text-[#7927D2]">External Links</h2>
+        <p class="text-white/80 leading-relaxed mb-8 text-lg md:text-xl">
+            This site may contain links to external websites. While I try to link only helpful and safe resources,
+            I have no control over their content and am not responsible for any changes made by those websites.
+        </p>
+        <h2 class="text-4xl font-bold mb-4 text-[#7927D2]">Consent</h2>
+        <p class="text-white/80 leading-relaxed mb-8 text-lg md:text-xl">
+            By using this website, you hereby consent to this disclaimer and agree to its terms.
+        </p>
+        <h2 class="text-4xl font-bold mb-4 text-[#7927D2]">Updates</h2>
+        <p class="text-white/80 leading-relaxed text-lg md:text-xl">
+            This disclaimer may be updated or changed without prior notice.
+            Any updates will be posted on this page with an updated date.
+        </p>
+    </section>
+    <!--Footer Section-->
+    <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
+            <!-- LOGO + ABOUT -->
+            <div>
+                <div class="flex items-center space-x-2">
+                    <img src="./asset/logo.png" alt="Logo" class="w-10 h-10 object-cover" />
+                    <h2 class="text-2xl font-semibold">About Me</h2>
+                </div>
+                <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+                    I break down complex user the experience problems the create integrity
+                    focused to <br> solutions that's connect.
+                </p>
+                <!-- Social Icons -->
+                <div class="flex space-x-4 mt-5">
+                    <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-x-twitter text-gray-400 hover:text-white text-lg"></i>
+                    <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
+                </div>
+            </div>
+
+            <!-- LEGAL DETAILS -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4">LEGAL DETAILS</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="./terms-condition.html" class="hover:text-white">Term & Conditions</a></li>
+                    <li><a href="./refund.html" class="hover:text-white">Refund and Cancellation</a></li>
+                    <li><a href="./disclaimer.html" class="hover:text-white">Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div>
+                <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4 uppercase">Our Services</h3>
+                <ul class="space-y-2 text-gray-400 text-lg">
+                    <li><a href="./about.html" class="hover:text-white">About Us</a></li>
+                    <li><a href="./consultation.html" class="hover:text-white">Consultation And Strategy</a></li>
+                    <li><a href="./mobile.html" class="hover:text-white">Mobile App Design</a></li>
+                    <li><a href="./ui/disclaimer.html" class="hover:text-white">UI/UX Design System Creation</a></li>
+                </ul>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <div>
+                <h3 class="text-sm font-semibold tracking-wider mb-4">SUBSCRIBE TO MY NEWSLETTER!</h3>
+                <div class="flex items-center bg-white rounded-full p-1 pl-4">
+                    <input type="text" placeholder="Enter First Name"
+                        class="flex-1 text-black text-sm bg-transparent outline-none">
+                    <button class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                        ↗
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="border-t border-white/10 my-10"></div>
+        <!-- Bottom Bar -->
+        <div class="flex items-center justify-center text-sm text-gray-400">
+            <div class="mt-4 md:mt-0">
+                ©2025 ALL RIGHTS RESERVED
+            </div>
+        </div>
+    </section>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn?.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            const icon = menuBtn.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-times");
+        });
+    </script>
+</body>
+
+</html>
