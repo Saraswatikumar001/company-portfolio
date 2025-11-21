@@ -42,12 +42,13 @@
 
       <!-- Let’s Talk Button (Desktop Only) -->
       <div class="hidden md:block">
-        <a href="#contact"
-          class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2 hover:from-indigo-500 hover:to-purple-500 transition-all duration-300">
+        <button onclick="openModal()"
+          class="bg-gradient-to-r from-[#712FDD] to-[#7927D2] text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2 hover:opacity-90 transition-all duration-300">
           <span>Let’s Talk</span>
           <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-        </a>
+        </button>
       </div>
+
 
       <!-- Mobile Hamburger Button -->
       <button id="menu-btn" class="md:hidden text-gray-300 text-3xl focus:outline-none">
@@ -62,12 +63,11 @@
       <a href="./blog.html" class="hover:text-white text-gray-300 text-lg text-center block">Blog</a>
       <a href="./testimonials.html" class="hover:text-white text-gray-300 text-lg text-center block">Testimonials</a>
       <a href="./contactus.html" class="hover:text-white text-gray-300 text-lg text-center block">Contact Us</a>
-
-      <a href="#contact"
-        class="mx-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 rounded-full font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 flex items-center space-x-2">
+      <button onclick="openModal()" class="mx-auto bg-gradient-to-r from-[#712FDD] to-[#7927D2] text-white px-6 py-2 rounded-full font-semibold 
+         hover:opacity-90 transition-all duration-300 flex items-center space-x-2">
         <span>Let’s Talk</span>
         <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-      </a>
+      </button>
     </div>
   </header>
   <main class="pt-[70px] text-center">
@@ -196,6 +196,42 @@
 
     </div>
   </main>
+  <section id="talkModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[9999]"
+    onclick="closeOutside(event)">
+    <!-- Modal Box -->
+    <div id="modalBox" class="relative bg-[#0e0e0e] w-[90%] max-w-lg p-8 rounded-2xl shadow-2xl border border-white/10 
+           transform scale-90 opacity-0 transition-all duration-300">
+      <!-- Close Icon -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-white/60 hover:text-white text-xl">
+        ✕
+      </button>
+      <h2 class="text-3xl font-bold text-white mb-4">Let’s Talk</h2>
+      <p class="text-white/70 mb-6 leading-relaxed">
+        Feel free to reach out! I'd love to discuss your project.
+      </p>
+      <form class="space-y-4">
+        <div>
+          <label class="text-white/80 text-sm">Full Name</label>
+          <input type="text" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white 
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your name">
+        </div>
+        <div>
+          <label class="text-white/80 text-sm">Email Address</label>
+          <input type="email" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your email">
+        </div>
+        <div>
+          <label class="text-white/80 text-sm">Message</label>
+          <textarea rows="4" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Write your message..."></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 bg-gradient-to-r from-[#712FDD] to-[#7927D2] text-white font-semibold 
+               rounded-lg shadow-lg hover:opacity-90 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
   <!--Footer Section-->
   <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
@@ -278,46 +314,39 @@
   <!-- Optional JS for subtle floating animation -->
   <script>
     $(document).ready(function () {
-      $('.feedback-slider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        arrows: true,
-        prevArrow:
-          '<button class="slick-prev absolute left-[-50px] top-1/2 transform -translate-y-1/2 bg-[#1a1526] text-white w-10 h-10 rounded-full flex items-center justify-center shadow"><i class="fa-solid fa-arrow-left"></i></button>',
-        nextArrow:
-          '<button class="slick-next absolute right-[-50px] top-1/2 transform -translate-y-1/2 bg-[#1a1526] text-white w-10 h-10 rounded-full flex items-center justify-center shadow"><i class="fa-solid fa-arrow-right"></i></button>',
-      });
-    });
-    // Simple button interaction (optional)
-    document.getElementById("knowMoreBtn").addEventListener("click", () => {
-      alert("Thanks for your interest! More content coming soon.");
-    });
-
-    document.querySelectorAll('.absolute').forEach(el => {
-      el.animate([
-        { transform: 'translateY(0px)' },
-        { transform: 'translateY(-10px)' },
-        { transform: 'translateY(0px)' }
-      ], {
-        duration: 4000,
-        iterations: Infinity
-      });
+      // Slick Slider
+      if ($(".feedback-slider").length) {
+        $(".feedback-slider").slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          arrows: true,
+          prevArrow:
+            '<button class="slick-prev custom-arrow left-arrow"><i class="fa-solid fa-arrow-left"></i></button>',
+          nextArrow:
+            '<button class="slick-next custom-arrow right-arrow"><i class="fa-solid fa-arrow-right"></i></button>',
+        });
+      }
     });
 
+    // Know More Button
+    const knowMoreBtn = document.getElementById("knowMoreBtn");
+    if (knowMoreBtn) {
+      knowMoreBtn.addEventListener("click", () => {
+        alert("Thanks for your interest! More content coming soon.");
+      });
+    }
+    // Filter Buttons
     const btns = document.querySelectorAll(".filter-btn");
     const cards = document.querySelectorAll(".card");
 
-    btns.forEach(btn => {
+    btns.forEach((btn) => {
       btn.addEventListener("click", () => {
-
-        // toggle active button
-        btns.forEach(b => b.classList.remove("active-btn"));
+        btns.forEach((b) => b.classList.remove("active-btn"));
         btn.classList.add("active-btn");
 
         const filter = btn.dataset.filter;
-
-        cards.forEach(card => {
+        cards.forEach((card) => {
           const category = card.dataset.category;
 
           if (filter === "all" || category === filter) {
@@ -329,17 +358,40 @@
       });
     });
 
+    // Mobile Menu
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        const icon = menuBtn.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-bars");
+          icon.classList.toggle("fa-times");
+        }
+      });
+    }
+    // Modal
+    const modal = document.getElementById("talkModal");
+    const modalBox = document.getElementById("modalBox");
+    function openModal() {
+      modal.classList.remove("hidden");
+      setTimeout(() => {
+        modalBox.classList.remove("scale-90", "opacity-0");
+      }, 10);
+    }
 
-    menuBtn?.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-      const icon = menuBtn.querySelector("i");
-      icon.classList.toggle("fa-bars");
-      icon.classList.toggle("fa-times");
-    });
+    function closeModal() {
+      modalBox.classList.add("scale-90", "opacity-0");
+      setTimeout(() => modal.classList.add("hidden"), 300);
+    }
 
-
+    // Close when clicking outside
+    function closeOutside(event) {
+      if (!modalBox.contains(event.target)) {
+        closeModal();
+      }
+    }
   </script>
 </body>
 

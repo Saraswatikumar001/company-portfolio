@@ -62,7 +62,6 @@
         <a href="./testimonials.html" class="hover:text-white">Testimonials</a>
         <a href="./contactus.html" class="hover:text-white">Contact Us</a>
       </nav>
-
       <!-- Let’s Talk Button (Desktop Only) -->
       <div class="hidden md:block">
         <button onclick="openModal()"
@@ -71,8 +70,6 @@
           <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
         </button>
       </div>
-
-
       <!-- Mobile Hamburger Button -->
       <button id="menu-btn" class="md:hidden text-gray-300 text-3xl focus:outline-none">
         <i class="fa-solid fa-bars"></i>
@@ -186,6 +183,7 @@
       </div>
     </section>
   </main>
+  <!--Footer Section-->>
   <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
       <!-- LOGO + ABOUT -->
@@ -212,9 +210,9 @@
         <h3 class="text-lg text-2xl font-semibold tracking-wider mb-4">LEGAL DETAILS</h3>
         <ul class="space-y-2 text-gray-400 text-lg">
           <li><a href="./privacy.html" class="hover:text-white">Privacy Policy</a></li>
-          <li><a href="./ui/terms-condition.html" class="hover:text-white">Term & Conditions</a></li>
-          <li><a href="./ui/refund.html" class="hover:text-white">Refund and Cancellation</a></li>
-          <li><a href="./ui/disclaimer.html" class="hover:text-white">Disclaimer</a></li>
+          <li><a href="./terms-condition.html" class="hover:text-white">Term & Conditions</a></li>
+          <li><a href="./refund.html" class="hover:text-white">Refund and Cancellation</a></li>
+          <li><a href="./disclaimer.html" class="hover:text-white">Disclaimer</a></li>
         </ul>
       </div>
 
@@ -287,6 +285,7 @@
       </form>
     </div>
   </section>
+  
   <!-- jQuery + Slick JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
@@ -298,71 +297,96 @@
   <script src="https://kit.fontawesome.com/a2e0e6ad4f.js" crossorigin="anonymous"></script>
   <!-- Optional JS for subtle floating animation -->
   <script>
-    $(document).ready(function () {
-      $('.feedback-slider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        arrows: true,
-        prevArrow:
-          '<button class="slick-prev absolute left-[-50px] top-1/2 transform -translate-y-1/2 bg-[#1a1526] text-white w-10 h-10 rounded-full flex items-center justify-center shadow"><i class="fa-solid fa-arrow-left"></i></button>',
-        nextArrow:
-          '<button class="slick-next absolute right-[-50px] top-1/2 transform -translate-y-1/2 bg-[#1a1526] text-white w-10 h-10 rounded-full flex items-center justify-center shadow"><i class="fa-solid fa-arrow-right"></i></button>',
-      });
-    });
-    // Simple button interaction (optional)
-    document.getElementById("knowMoreBtn").addEventListener("click", () => {
-      alert("Thanks for your interest! More content coming soon.");
-    });
 
-    document.querySelectorAll('.absolute').forEach(el => {
-      el.animate([
-        { transform: 'translateY(0px)' },
-        { transform: 'translateY(-10px)' },
-        { transform: 'translateY(0px)' }
-      ], {
-        duration: 4000,
-        iterations: Infinity
-      });
-    });
-
-    const btns = document.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll(".card");
-
-    btns.forEach(btn => {
-      btn.addEventListener("click", () => {
-
-        // toggle active button
-        btns.forEach(b => b.classList.remove("active-btn"));
-        btn.classList.add("active-btn");
-
-        const filter = btn.dataset.filter;
-
-        cards.forEach(card => {
-          const category = card.dataset.category;
-
-          if (filter === "all" || category === filter) {
-            card.classList.remove("hidden-card");
-          } else {
-            card.classList.add("hidden-card");
-          }
-        });
-      });
-    });
-
+    /* -------------------- MOBILE MENU -------------------- */
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
-    menuBtn?.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-      const icon = menuBtn.querySelector("i");
-      icon.classList.toggle("fa-bars");
-      icon.classList.toggle("fa-times");
-    });
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        const icon = menuBtn.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("fa-bars");
+          icon.classList.toggle("fa-times");
+        }
+      });
+    }
+    $(document).ready(function () {
+      /* -------------------------
+         1. Slick Slider (Safe Init)
+      -------------------------- */
+      if ($('.feedback-slider').length > 0) {
+        $('.feedback-slider').slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          arrows: true,
+          prevArrow:
+            '<button class="slick-prev absolute left-[-50px] top-1/2 transform -translate-y-1/2 bg-[#1a1526] text-white w-10 h-10 rounded-full flex items-center justify-center shadow"><i class="fa-solid fa-arrow-left"></i></button>',
+          nextArrow:
+            '<button class="slick-next absolute right-[-50px] top-1/2 transform -translate-y-1/2 bg-[#1a1526] text-white w-10 h-10 rounded-full flex items-center justify-center shadow"><i class="fa-solid fa-arrow-right"></i></button>',
+        });
+      }
 
 
+      /* -------------------------
+         2. Know More Button
+      -------------------------- */
+      const knowMoreBtn = document.getElementById("knowMoreBtn");
+      if (knowMoreBtn) {
+        knowMoreBtn.addEventListener("click", () => {
+          alert("Thanks for your interest! More content coming soon.");
+        });
+      }
 
-    //Modal Functionality  
+
+      /* -------------------------
+         3. Floating Animations 
+            (Only animate .floating objects)
+      -------------------------- */
+      document.querySelectorAll('.floating').forEach(el => {
+        el.animate([
+          { transform: 'translateY(0px)' },
+          { transform: 'translateY(-10px)' },
+          { transform: 'translateY(0px)' }
+        ], {
+          duration: 4000,
+          iterations: Infinity
+        });
+      });
+
+
+      /* -------------------------
+         4. Portfolio Filter
+      -------------------------- */
+      const btns = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".card");
+
+      if (btns.length > 0 && cards.length > 0) {
+        btns.forEach(btn => {
+          btn.addEventListener("click", () => {
+            btns.forEach(b => b.classList.remove("active-btn"));
+            btn.classList.add("active-btn");
+
+            const filter = btn.dataset.filter;
+
+            cards.forEach(card => {
+              const category = card.dataset.category;
+
+              if (filter === "all" || category === filter) {
+                card.classList.remove("hidden-card");
+              } else {
+                card.classList.add("hidden-card");
+              }
+            });
+          });
+        });
+      }
+    /* -------------------------
+       6. Modal Functions
+    -------------------------- */
     const modal = document.getElementById("talkModal");
     const modalBox = document.getElementById("modalBox");
 
@@ -378,14 +402,18 @@
       setTimeout(() => modal.classList.add("hidden"), 300);
     }
 
-    // close when clicking outside modal box
-    function closeOutside(event) {
-      if (!modalBox.contains(event.target)) {
-        closeModal();
-      }
+    // closeOutside event attachment
+    if (modal) {
+      modal.addEventListener("click", (event) => {
+        if (!modalBox.contains(event.target)) {
+          closeModal();
+        }
+      });
     }
-
   </script>
+
+
+
 </body>
 
 </html>
