@@ -183,6 +183,42 @@
       </div>
     </section>
   </main>
+  <section id="talkModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[9999]"
+    onclick="closeOutside(event)">
+    <!-- Modal Box -->
+    <div id="modalBox" class="relative bg-[#0e0e0e] w-[90%] max-w-lg p-8 rounded-2xl shadow-2xl border border-white/10 
+           transform scale-90 opacity-0 transition-all duration-300">
+      <!-- Close Icon -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-white/60 hover:text-white text-xl">
+        ✕
+      </button>
+      <h2 class="text-3xl font-bold text-white mb-4">Let’s Talk</h2>
+      <p class="text-white/70 mb-6 leading-relaxed">
+        Feel free to reach out! I'd love to discuss your project.
+      </p>
+      <form class="space-y-4">
+        <div>
+          <label class="text-white/80 text-sm">Full Name</label>
+          <input type="text" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white 
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your name">
+        </div>
+        <div>
+          <label class="text-white/80 text-sm">Email Address</label>
+          <input type="email" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your email">
+        </div>
+        <div>
+          <label class="text-white/80 text-sm">Message</label>
+          <textarea rows="4" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
+                 focus:outline-none focus:border-[#7927D2]" placeholder="Write your message..."></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 bg-gradient-to-r from-[#712FDD] to-[#7927D2] text-white font-semibold 
+               rounded-lg shadow-lg hover:opacity-90 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
   <!--Footer Section-->
   <section class="bg-[#060606] text-white py-16 px-6 rounded-3xl  mt-10">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto">
@@ -249,42 +285,6 @@
       </div>
     </div>
   </section>
-  <section id="talkModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[9999]"
-    onclick="closeOutside(event)">
-    <!-- Modal Box -->
-    <div id="modalBox" class="relative bg-[#0e0e0e] w-[90%] max-w-lg p-8 rounded-2xl shadow-2xl border border-white/10 
-           transform scale-90 opacity-0 transition-all duration-300">
-      <!-- Close Icon -->
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-white/60 hover:text-white text-xl">
-        ✕
-      </button>
-      <h2 class="text-3xl font-bold text-white mb-4">Let’s Talk</h2>
-      <p class="text-white/70 mb-6 leading-relaxed">
-        Feel free to reach out! I'd love to discuss your project.
-      </p>
-      <form class="space-y-4">
-        <div>
-          <label class="text-white/80 text-sm">Full Name</label>
-          <input type="text" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white 
-                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your name">
-        </div>
-        <div>
-          <label class="text-white/80 text-sm">Email Address</label>
-          <input type="email" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
-                 focus:outline-none focus:border-[#7927D2]" placeholder="Enter your email">
-        </div>
-        <div>
-          <label class="text-white/80 text-sm">Message</label>
-          <textarea rows="4" class="w-full mt-1 px-4 py-2 bg-black/40 border border-white/20 rounded-lg text-white
-                 focus:outline-none focus:border-[#7927D2]" placeholder="Write your message..."></textarea>
-        </div>
-        <button type="submit" class="w-full py-3 bg-gradient-to-r from-[#712FDD] to-[#7927D2] text-white font-semibold 
-               rounded-lg shadow-lg hover:opacity-90 transition">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </section>  
   <!-- jQuery + Slick JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
@@ -296,7 +296,7 @@
   <script src="https://kit.fontawesome.com/a2e0e6ad4f.js" crossorigin="anonymous"></script>
   <!-- Optional JS for subtle floating animation -->
   <script>
-
+    /* -------------------- MOBILE MENU -------------------- */
     /* -------------------- MOBILE MENU -------------------- */
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -312,9 +312,12 @@
         }
       });
     }
+
+    /* -------------------- DOCUMENT READY -------------------- */
     $(document).ready(function () {
+
       /* -------------------------
-         1. Slick Slider (Safe Init)
+         1. Slick Slider
       -------------------------- */
       if ($('.feedback-slider').length > 0) {
         $('.feedback-slider').slick({
@@ -329,7 +332,6 @@
         });
       }
 
-
       /* -------------------------
          2. Know More Button
       -------------------------- */
@@ -340,31 +342,33 @@
         });
       }
 
-
       /* -------------------------
          3. Floating Animations 
-            (Only animate .floating objects)
       -------------------------- */
       document.querySelectorAll('.floating').forEach(el => {
-        el.animate([
-          { transform: 'translateY(0px)' },
-          { transform: 'translateY(-10px)' },
-          { transform: 'translateY(0px)' }
-        ], {
-          duration: 4000,
-          iterations: Infinity
-        });
+        el.animate(
+          [
+            { transform: 'translateY(0px)' },
+            { transform: 'translateY(-10px)' },
+            { transform: 'translateY(0px)' }
+          ],
+          {
+            duration: 4000,
+            iterations: Infinity
+          }
+        );
       });
-
 
       /* -------------------------
          4. Portfolio Filter
       -------------------------- */
       const btns = document.querySelectorAll(".filter-btn");
       const cards = document.querySelectorAll(".card");
+
       if (btns.length > 0 && cards.length > 0) {
         btns.forEach(btn => {
           btn.addEventListener("click", () => {
+
             btns.forEach(b => b.classList.remove("active-btn"));
             btn.classList.add("active-btn");
 
@@ -382,13 +386,20 @@
           });
         });
       }
+
+    });
+    /* ← END OF DOCUMENT READY */
+
+
     /* -------------------------
-       6. Modal Functions
+       5. MODAL FUNCTIONS
     -------------------------- */
+
     const modal = document.getElementById("talkModal");
     const modalBox = document.getElementById("modalBox");
 
     function openModal() {
+      if (!modal || !modalBox) return;
       modal.classList.remove("hidden");
       setTimeout(() => {
         modalBox.classList.remove("scale-90", "opacity-0");
@@ -396,22 +407,13 @@
     }
 
     function closeModal() {
+      if (!modal || !modalBox) return;
       modalBox.classList.add("scale-90", "opacity-0");
       setTimeout(() => modal.classList.add("hidden"), 300);
     }
 
-    // closeOutside event attachment
-    if (modal) {
-      modal.addEventListener("click", (event) => {
-        if (!modalBox.contains(event.target)) {
-          closeModal();
-        }
-      });
-    }
+
   </script>
-
-
-
 </body>
 
 </html>
